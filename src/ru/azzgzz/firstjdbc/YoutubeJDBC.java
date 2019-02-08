@@ -14,7 +14,7 @@ public class YoutubeJDBC {
         try {
             //Driver d = (Driver) Class.forName("org.sqlite.JDBC").newInstance();
 
-            String url = "jdbc:sqlite:/home/azamat/Документы/MyStudy/SQLiteBrowserTest";
+            String url = "jdbc:sqlite:SQLiteCityDB";
 
             con = DriverManager.getConnection(url);
 
@@ -36,10 +36,7 @@ public class YoutubeJDBC {
             }
 
 
-        } catch (SQLException e){
-e.printStackTrace();
-        }
-        catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
@@ -49,7 +46,7 @@ e.printStackTrace();
                     stmt.close();
                 if (con != null)
                     con.close();
-            } catch (Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }

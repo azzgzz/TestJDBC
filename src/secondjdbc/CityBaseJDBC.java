@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class CityBaseJDBC {
 
-    private static final String url = "jdbc:sqlite:/home/azamat/Документы/Java/JavaWorkspaces/eclipse-workspace/SQLiteBrowserTest";
+    private static final String url = "jdbc:sqlite:SQLiteCityDB";
 
     private static Connection connection = null;
     private static Statement statement = null;

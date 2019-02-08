@@ -10,7 +10,7 @@ public class AlmostJDBC {
         Connection conn = null;
         try {
             // db parameters
-            String url = "jdbc:sqlite:/home/azamat/Документы/MyStudy/SQLiteBrowserTest";
+            String url = "jdbc:sqlite:SQLiteCityDB";
             // crate a connection to the database
             conn = DriverManager.getConnection(url);
 
