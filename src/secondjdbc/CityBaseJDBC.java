@@ -19,13 +19,6 @@ public class CityBaseJDBC {
         }
     }
 
-//    private static Connection getConnection() {
-//        if (connection == null) {
-//            connect();
-//        }
-//        return connection;
-//    }
-
     private static Statement getStatement() {
         if (statement == null) {
             connect();
