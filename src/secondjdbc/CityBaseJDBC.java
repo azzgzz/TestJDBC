@@ -16,33 +16,24 @@ public class CityBaseJDBC {
             statement = connection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
-        } /*finally {
-            try {
-                if (statement != null)
-                    statement.close();
-                if (connection != null)
-                    connection.close();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }*/
-    }
-
-    private static Connection getConnection() {
-        if (connection == null) {
-            connect();
         }
-        return connection;
     }
 
-    public static Statement getStatement() {
+//    private static Connection getConnection() {
+//        if (connection == null) {
+//            connect();
+//        }
+//        return connection;
+//    }
+
+    private static Statement getStatement() {
         if (statement == null) {
             connect();
         }
         return statement;
     }
 
-    public static void closeConnection() {
+    private static void closeConnection() {
         try {
             if (statement != null)
                 statement.close();
@@ -65,11 +56,9 @@ public class CityBaseJDBC {
 
             while (res.next()) {
                 System.out.println(res.getString(2)
-                        + " | " + res.getString("name2")
+                        + " | " + res.getString(5)
                         + " | " + res.getString(6));
             }
-
-
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class AlmostJDBC {
 
-    public static void connect() {
+    private static void connect() {
         Connection conn = null;
         try {
             // db parameters
